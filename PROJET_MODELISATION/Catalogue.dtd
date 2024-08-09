@@ -1,0 +1,31 @@
+
+
+<!ELEMENT catalogue (livreQuantite*)>
+<!ELEMENT livreQuantite (livre*)>
+
+<!ATTLIST livreQuantite quantite CDATA #REQUIRED>
+
+<!ELEMENT livre (titre, auteur+, prix+, pages, dateParution, resume, commentaire*, couverture, genre, moyenne)>
+
+<!ATTLIST livre ISBN CDATA #REQUIRED>
+
+<!ELEMENT titre (#PCDATA)>
+<!ELEMENT auteur (#PCDATA)>
+<!ELEMENT prix (#PCDATA)>
+<!ELEMENT pages (#PCDATA)>
+<!ELEMENT dateParution (#PCDATA)>
+<!ELEMENT resume (#PCDATA)>
+<!ELEMENT commentaire (avis, date, note)>
+
+<!ATTLIST commentaire nom CDATA #REQUIRED>
+<!ATTLIST commentaire prenom CDATA #REQUIRED>
+            
+<!ELEMENT avis (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT note (#PCDATA)>
+<!ELEMENT couverture EMPTY>
+
+<!ATTLIST couverture img CDATA #IMPLIED>
+
+<!ELEMENT genre ( science-fiction | aventures | philosophie | policier | horreur | tragédie | comédie | drame | poésie | romance | fantastique | fantaisy | autobiographie )>
+<!ELEMENT moyenne (#PCDATA)>

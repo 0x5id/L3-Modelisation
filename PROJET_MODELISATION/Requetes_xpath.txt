@@ -1,0 +1,33 @@
+Le nombre d'article : 
+/catalogue/livreQuantite/@quantite
+
+Les titres de chaque livres dans le catalogue :
+/catalogue/livreQuantite/livre/titre
+
+Les ID de chaque livres livres :
+/catalogue/livreQuantite/livre/@IDLivre
+
+Le titre des livres avec un prix supérieur à 7 euros : 
+/catalogue/livreQuantite/livre[prix>7]/titre
+
+Le titre des livres apparus avant l'an 2000 : 
+/catalogue/livreQuantite/livre[dateParution<2000]/titre
+
+Le titre des livres apparus après et pendant l'an 2000 : 
+/catalogue/livreQuantite/livre[dateParution>=2000]/titre
+
+La photo de couverture d'un livre :
+/catalogue/livreQuantite/livre/couverture/@img
+
+Les ID des livres contenant plus d'un commentaire:
+/catalogue/livreQuantite/livre[count (commentaire)>1]/@IDLivre
+
+Le titre des livres avec une note moyenne supérieure ou égale à 9 : 
+/catalogue/livreQuantite/livre[moyenne>=9]/titre
+
+Les ID des livres avec un nombre de page inférieur ou égal a 400 : 
+/catalogue/livreQuantite/livre[pages<=400]/@IDLivres
+
+
+
+

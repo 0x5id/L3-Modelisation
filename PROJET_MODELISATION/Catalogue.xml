@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE catalogue SYSTEM "Catalogue.dtd">
+
+<catalogue>
+
+    <livreQuantite quantite="4">
+
+        <livre IDLivre="89274">
+            <titre>Les Fleurs Du Mal</titre>
+            <auteur>Charles Baudelaire</auteur>
+            <prix>3.50</prix>
+            <pages>304</pages>
+            <dateParution>2019</dateParution>
+            <resume>blabla blablabla</resume>
+
+            <commentaires nom="Leblanc" prenom="Fred">
+                <avis>Très bon recueil, un classique!</avis>
+                <date>12/07/2020</date>
+                <note>8.5</note>
+            </commentaires>
+
+            <commentaires nom="Lebleu" prenom="Alphonse">
+                <avis>J'ai adoré chaque poèmes.</avis>
+                <date>09/02/2021</date>
+                <note>9</note>
+            </commentaires>
+
+            <couverture img="../Couverture_89274.jpeg" />
+            <genre>poésie</genre>
+            <moyenne>8.75</moyenne>
+        </livre>
+
+        <livre IDLivre="698304">
+            <titre>La Promesse de l'aube</titre>
+            <auteur>Romain Gary</auteur>
+            <prix>5.00</prix>
+            <pages>379</pages>
+            <dateParution>1960</dateParution>
+            <resume>blabla blablabla</resume>
+
+            <commentaires nom="LeRouge" prenom="Grégoire">
+                <avis>Magnifique Autobiographie, très émouvent.</avis>
+                <date>18/07/2020</date>
+                <note>7.5</note>
+            </commentaires>
+
+            <couverture img="../Couverture_698304.jpeg" />
+            <genre>autobiographie</genre>
+            <moyenne>7.5</moyenne>
+        </livre>
+        
+        <livre IDLivre="42979">
+            <titre>Le bonheur commence maintenant</titre>
+            <auteur>Thomas Raphaël</auteur>
+            <prix>5.99</prix>
+            <pages>522</pages>
+            <dateParution>2013</dateParution>
+            <resume>blabla blablabla</resume>
+
+            <couverture img="../Couverture_42979.jpeg" />
+            <genre>Comédie</genre>
+            <moyenne>?</moyenne>
+        </livre>
+        
+        <livre IDLivre="72306">
+            <titre>1991</titre>
+            <auteur>Franck Thilliez</auteur>
+            <prix>9.99</prix>
+            <pages>504</pages>
+            <dateParution>2021</dateParution>
+            <resume>blabla blablabla</resume>
+
+            <commentaires nom="LeJaune" prenom="Julie">
+                <avis>Le supsense et les dénouments m'ont rendue très nerveuse, je recommande !</avis>
+                <date>20/02/2022</date>
+                <note>9.5</note>
+            </commentaires>
+
+            <couverture img="../Couverture_72306.jpeg" />
+            <genre>Policier</genre>
+            <moyenne>9.5</moyenne>
+        </livre>
+
+
+    </livreQuantite>
+</catalogue>
+
+
+
+
+<!-- 
+
+REQUETES XPATH
+
+Le nombre d'article : 
+/catalogue/livreQuantite/@quantite
+
+Les titres de chaque livres dans le catalogue :
+/catalogue/livreQuantite/livre/titre
+
+Les ID de chaque livres livres :
+/catalogue/livreQuantite/livre/@IDLivre
+
+Le titre des livres avec un prix supérieur à 7 euros : 
+/catalogue/livreQuantite/livre[prix>7]/titre
+
+Le titre des livres apparus avant l'an 2000 : 
+/catalogue/livreQuantite/livre[dateParution<2000]/titre
+
+Le titre des livres apparus après et pendant l'an 2000 : 
+/catalogue/livreQuantite/livre[dateParution>=2000]/titre
+
+La photo de couverture d'un livre :
+/catalogue/livreQuantite/livre/couverture/@img
+
+Les ID des livres contenant plus d'un commentaire:
+/catalogue/livreQuantite/livre[count (commentaire)>1]/@IDLivre
+
+Le titre des livres avec une note moyenne supérieure ou égale à 9 : 
+/catalogue/livreQuantite/livre[moyenne>=9]/titre
+
+Les ID des livres avec un nombre de page inférieur ou égal a 400 : 
+/catalogue/livreQuantite/livre[pages<=400]/@IDLivres 
+
+-->
